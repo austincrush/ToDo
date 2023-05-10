@@ -12,18 +12,10 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class LoginController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button LoginPageLoginButton;
@@ -73,7 +65,6 @@ public class LoginController {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-
         });
 
         LoginPageSignUpButton.setOnAction(actionEvent -> {
@@ -114,5 +105,4 @@ public class LoginController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
 }

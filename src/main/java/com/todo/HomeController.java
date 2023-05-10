@@ -9,18 +9,10 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class HomeController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button HomePageAddTaskButton;
@@ -51,7 +43,7 @@ public class HomeController {
         int i = 0;
 
         while (resultSet2.next()) {
-            String temp = resultSet2.getString("taskinfo");
+            String temp = resultSet2.getString(Const.TASKS_TASKINFO);
             items[i] = temp;
             i++;
         }
@@ -99,8 +91,6 @@ public class HomeController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
-
         });
-
     }
 }

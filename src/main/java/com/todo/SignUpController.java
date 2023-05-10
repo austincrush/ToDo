@@ -12,18 +12,10 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 public class SignUpController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField SignUpPageFirstName;
@@ -65,7 +57,6 @@ public class SignUpController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
-
         });
     }
 
@@ -100,6 +91,5 @@ public class SignUpController {
                 throw new RuntimeException(e);
             }
         }
-
     }
 }
