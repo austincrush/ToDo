@@ -50,6 +50,8 @@ public class HomeController {
 
         HomePageTaskList.getItems().addAll(items);
 
+        HomePageDeleteTaskButton.setDisable(HomePageTaskList.getSelectionModel().getSelectedItem() == null);
+
         HomePageAddTaskButton.setOnAction(actionEvent -> {
             HomePageAddTaskButton.getScene().getWindow().hide();
 
@@ -66,6 +68,7 @@ public class HomeController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
 
@@ -90,6 +93,7 @@ public class HomeController {
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
     }
